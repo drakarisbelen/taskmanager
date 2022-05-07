@@ -1,0 +1,90 @@
+NodeJs entorno de ejecución
+Interpreter de Javascript
+Nota: Puedo buscar más tutoriales o leer la documentación de Nodejs
+
+Mongo DB es una base de datos NoSQL  - opensource
+Guarda datos en objetos JSON
+-Para aplicaciones que generan datos muy rapido o big data
+-Humoungous de gigante
+-Esta escrito en c++
+-Datos sin esquema
+-Escalado Orizontal - se distribuye en clusters
+-Formato de datos JSON
+
+
+https://cloud.mongodb.com/v2/60612e705078170629972629#clusters
+
+-MongoDB Server
+-MongoDB Compass
+
+Para arrancar el proyecto y las dependencias:
+npm init -y
+
+
+Dependencias adicionales:
+npm i express express-handlebars mongoose morgan
+
+
+handlebars: plantilla para hacer condicionales o bucles dentro del html
+
+morgan para ver por consola las peticiones que llegan
+
+
+NodeJs: usa commonjs
+utiliza require
+puedo usar import pero tengo que configurar unas cosas
+
+Forma de importar modulos:
+Buscar babel: compilador javascript y el navegador va a poder entenderlo ej: import/async/await etc
+
+Instalacion: 
+a) D Mayuscula son dependencias de desarrollo
+b) nodemon para reiniciar el codigo
+
+npm i -D @babel/core @babel/cli @babel/node @babel/preset-env nodemon
+
+
+Luego en el proyecto .babelrc
+Le indico que quiero traducir
+{
+    "presets":[
+        "@babel/preset-env"
+    ]
+}
+
+IMPORTANTE:
+Esto anterior me va a permitir importar express
+Luego para ejecutarlo hay que ejecutar utilizando 
+npx babel-node src/index.js
+
+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+
+Esto se hace para que pueda leer el import
+si hacia node index.js me va a dar error en la
+importación
+
+C:\Users\Karina Escobar\Documents\taskmanager\src\index.js:1
+import express from "express";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+
+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+
+
+App.get para indicarla que si visitan la ruta principal
+devuelva
+ 
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
+
+
+
+//////////////// //////////////// //////////////// //////////////// 
+ESTRUCTURA DE MI PROYECTO
+//////////////// //////////////// //////////////// //////////////// 
+Dentro de src/
+
+index.router.js
+
+import { Router } from "express"; Es el enrutador del archivo
+
