@@ -22,7 +22,6 @@
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "express": "^4.18.1",
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
     "@babel/node": "^7.17.10",
