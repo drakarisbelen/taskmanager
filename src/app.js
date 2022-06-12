@@ -30,7 +30,8 @@ app.use(morgan("dev")); //hace de middlere y muestra x consola las peticiones qu
 app.use(express.urlencoded({ extended: false }));
 
 //Routes
-
 app.use(indexRoutes);
 
+//static files
+app.use(express.static(path.join(__dirname, "public")));
 export default app;
